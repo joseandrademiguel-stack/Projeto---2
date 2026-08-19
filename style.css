@@ -1,0 +1,233 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   CABEÇALHO
+================================= */
+
+header {
+    background-color: #1769aa;
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+================================= */
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+/* ==============================
+   POSTS
+================================= */
+
+article {
+    display: flex;
+
+    align-items: flex-start;
+    gap: 25px;
+
+    background-color: white;
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   IMAGEM
+================================= */
+
+article img {
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* ==============================
+   CONTEÚDO DO POST
+================================= */
+
+.conteudo-post {
+    flex: 1;
+}
+
+.conteudo-post h2 {
+    color: #1769aa;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ==============================
+   AUTOR
+================================= */
+
+.artigo-autor {
+    font-weight: bold;
+
+    color: #555;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   TEXTO
+================================= */
+
+.conteudo-post > p:not(.artigo-autor) {
+    color: #444;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==============================
+   BOTÕES
+================================= */
+
+.reacoes {
+    display: flex;
+
+    gap: 10px;
+}
+
+.botao-reacao {
+    border: none;
+
+    background-color: #eef3f8;
+
+    border-radius: 8px;
+
+    padding: 8px 14px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.botao-reacao:hover {
+    background-color: #dce8f2;
+
+    transform: scale(1.05);
+}
+
+.botao-reacao:active {
+    transform: scale(0.95);
+}
+
+.botao-reacao span {
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-left: 3px;
+}
+
+
+/* ==============================
+   RODAPÉ
+================================= */
+
+footer {
+    background-color: #12344d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 650px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    article img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .conteudo-post {
+        width: 100%;
+    }
+
+}
